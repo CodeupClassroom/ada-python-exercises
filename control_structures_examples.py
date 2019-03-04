@@ -61,15 +61,47 @@
 #     print(n)
 
 
-dataset = [{'name': 'age', 'type': 'int', 'data': [20, 25, 43, 11, 15, 53, 36]},
-           {'name': 'is_vegetarian', 'type': 'boolean', 'data': [False, True, False, False, True, False, False]},
-           {'name': 'shoe size', 'type': 'int', 'data': [8, 11, 7, 10, 7, 9, 10]},
-           {'name': 'ISP', 'type': 'categorical', 'data': ['AT&T', 'Spectrum', 'Spectrum', 'Spectrum', 'AT&T', 'Spectrum', 'AT&T']},
-           {'name': 'BMI', 'type': 'float', 'data': [29.9, 20.4, 23.3, 21.7, 22.2, 22.8, 27.0]}]
+# dataset = [{'name': 'age', 'type': 'int', 'data': [20, 25, 43, 11, 15, 53, 36]},
+#            {'name': 'is_vegetarian', 'type': 'boolean', 'data': [False, True, False, False, True, False, False]},
+#            {'name': 'shoe size', 'type': 'int', 'data': [8, 11, 7, 10, 7, 9, 10]},
+#            {'name': 'ISP', 'type': 'categorical', 'data': ['AT&T', 'Spectrum', 'Spectrum', 'Spectrum', 'AT&T', 'Spectrum', 'AT&T']},
+#            {'name': 'BMI', 'type': 'float', 'data': [29.9, 20.4, 23.3, 21.7, 22.2, 22.8, 27.0]}]
 
-print('Here is a summary of our data:')
-for feature in dataset:
-    if feature['type'] == 'boolean':
-        print(feature['name'])
-        for x in feature['data']:
-            print(f'    - {x}')
+# print('Here is a summary of our data:')
+# for feature in dataset:
+#     if feature['type'] == 'boolean':
+#         print(feature['name'])
+#         for x in feature['data']:
+#             print(f'    - {x}')
+
+
+# i = 5
+# while 10 >= i:
+#     print(i)
+#     i += 1
+
+# while True:
+#     print('Will you see this?')
+
+# user_input = input('Please enter a number: ')
+# # until the user enters something that looks like a number,
+# # keep prompting for input
+# while not user_input.isdigit():
+#     user_input = input('HeY!!!! Give me a number: ')
+
+# user_input = int(user_input)
+# print('Your number plus 100 is %d' % (user_input + 100))
+
+
+# for i in range(100):
+#     print(i)
+#     if i >= 10:
+#         break
+
+for i in range(1, 8):
+    # skip the numbers evenly divisible by 3
+    is_divisible_by_three = i % 3 == 0
+    if is_divisible_by_three:
+        continue
+    print(i)
+
