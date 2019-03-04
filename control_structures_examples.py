@@ -18,24 +18,24 @@
 
 
 
-pizza_preference = input('What kind of pizza do you like? ')
-if pizza_preference == 'pineapple and hot sauce':
-    print('Wow! What a coincidence, that is my favorite too!')
-    spicy_level = int(input('How spicy would you like it? (1-5) '))
-    if spicy_level == 5:
-        print('Wow! That is hot!')
-    elif spicy_level > 3:
-        print('Can we take it down a notch?')
-    else:
-        print('That sounds good!')
-elif pizza_preference == 'pepperoni, jalepeno, and anchovies':
-    print('Hmmmm... okay')
-elif pizza_preference == 'cheese':
-    print('Just plain cheese... okay')
-else:
-    print('That is not my favorite, but lets order some!')
+# pizza_preference = input('What kind of pizza do you like? ')
+# if pizza_preference == 'pineapple and hot sauce':
+#     print('Wow! What a coincidence, that is my favorite too!')
+#     spicy_level = int(input('How spicy would you like it? (1-5) '))
+#     if spicy_level == 5:
+#         print('Wow! That is hot!')
+#     elif spicy_level > 3:
+#         print('Can we take it down a notch?')
+#     else:
+#         print('That sounds good!')
+# elif pizza_preference == 'pepperoni, jalepeno, and anchovies':
+#     print('Hmmmm... okay')
+# elif pizza_preference == 'cheese':
+#     print('Just plain cheese... okay')
+# else:
+#     print('That is not my favorite, but lets order some!')
 
-print('All Done')
+# print('All Done')
 
 
 
@@ -51,3 +51,25 @@ print('All Done')
 # else:
 #     print(4)
 
+
+
+
+
+# ---------------- Loops --------------
+
+# for n in range(1, 11):
+#     print(n)
+
+
+dataset = [{'name': 'age', 'type': 'int', 'data': [20, 25, 43, 11, 15, 53, 36]},
+           {'name': 'is_vegetarian', 'type': 'boolean', 'data': [False, True, False, False, True, False, False]},
+           {'name': 'shoe size', 'type': 'int', 'data': [8, 11, 7, 10, 7, 9, 10]},
+           {'name': 'ISP', 'type': 'categorical', 'data': ['AT&T', 'Spectrum', 'Spectrum', 'Spectrum', 'AT&T', 'Spectrum', 'AT&T']},
+           {'name': 'BMI', 'type': 'float', 'data': [29.9, 20.4, 23.3, 21.7, 22.2, 22.8, 27.0]}]
+
+print('Here is a summary of our data:')
+for feature in dataset:
+    if feature['type'] == 'boolean':
+        print(feature['name'])
+        for x in feature['data']:
+            print(f'    - {x}')
