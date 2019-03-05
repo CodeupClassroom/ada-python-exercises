@@ -224,17 +224,21 @@
 #   keep prompting the user for input
 
 # number_to_skip = input('Please enter an odd number (1-50): ')
-# while not number_to_skip.isdigit() or int(number_to_skip) < 1 or int(number_to_skip) > 50 or int(number_to_skip) % 2 == 0:
-#     number_to_skip = input('Please enter an odd number (1-50): ')
+while not number_to_skip.isdigit() or int(number_to_skip) < 1 or int(number_to_skip) > 50 or int(number_to_skip) % 2 == 0:
+    number_to_skip = input('Please enter an odd number (1-50): ')
+
+# The example below *will not work* because of the order of the conditions
+while int(number_to_skip) < 1 or not number_to_skip.isdigit() or int(number_to_skip) > 50 or int(number_to_skip) % 2 == 0:
+    number_to_skip = input('Please enter an odd number (1-50): ')
 
 # # keep prompting for input
 # # if we have valid input, stop the loop
-# while True:
-#     number_to_skip = input('Enter an odd number (1-50): ')
-#     # if number_to_skip.isdigit() and 1 <= int(number_to_skip) <= 50 and int(number_to_skip) % 2 == 1:
-#     #     break
-#     if number_to_skip.isdigit() and int(number_to_skip) in range(1, 51) and int(number_to_skip) % 2 == 1:
-#         break
+while True:
+    number_to_skip = input('Enter an odd number (1-50): ')
+    # if number_to_skip.isdigit() and 1 <= int(number_to_skip) <= 50 and int(number_to_skip) % 2 == 1:
+    #     break
+    if number_to_skip.isdigit() and int(number_to_skip) in range(1, 51) and int(number_to_skip) % 2 == 1:
+        break
 
 # number_to_skip = int(number_to_skip)
 # step 2: do logic with the number we acquired
@@ -245,13 +249,13 @@
 #       print the special message
 #   else
 #       print the number
-# for n in range(1, 51):
-#     if n % 2 == 0:
-#         continue
-#     if n == number_to_skip:
-#         print(f'Yikes! Skipping number {n}')
-#     else:
-#         print(f'Here is an odd number: {n}')
+for n in range(1, 51):
+    if n % 2 == 0:
+        continue
+    if n == number_to_skip:
+        print(f'Yikes! Skipping number {n}')
+    else:
+        print(f'Here is an odd number: {n}')
 
 #     1. The `input` function can be used to prompt for input and use that input
 #        in your python code. Prompt the user to enter a positive number and write
@@ -389,34 +393,60 @@
 #    you have read. Each dictionary in the list should have the keys `title`,
 #    `author`, and `genre`. Loop through the list and print out information about
 #    each book.
-books = [
-    {
-        'title': 'Data Science From Scratch',
-        'author': 'Joel Grus',
-        'genre': ['Data Science', 'Python', 'Programming']
-    },
-    {
-        'title': 'Beautiful Evidence',
-        'author': 'Edward Tufte',
-        'genre': ['Visualizations', 'Data Science']
-    },
-    {
-        'title': 'Oh the places you\'ll go',
-        'author': 'Dr. Seuss',
-        'genre': ['Whimsy', 'Childrens']
-    }
-]
+# books = [
+#     {
+#         'title': 'Data Science From Scratch',
+#         'author': 'Joel Grus',
+#         'genre': ['Data Science', 'Python', 'Programming']
+#     },
+#     {
+#         'title': 'Beautiful Evidence',
+#         'author': 'Edward Tufte',
+#         'genre': ['Visualizations', 'Data Science']
+#     },
+#     {
+#         'title': 'Oh the places you\'ll go',
+#         'author': 'Dr. Seuss',
+#         'genre': ['Whimsy', 'Childrens']
+#     }
+# ]
 
-genre_to_show = input('Enter a genre: ')
+# genre_to_show = input('Enter a genre: ')
 
-for book in books:
-    if genre_to_show not in book['genre']:
-        continue
-    print('-------------')
-    print('- title: %s' % book['title'])
-    print('- author: %s' % book['author'])
-    print('- genre: %s' % book['genre'])
+# for book in books:
+#     if genre_to_show not in book['genre']:
+#         continue
+#     print('-------------')
+#     print('- title: %s' % book['title'])
+#     print('- author: %s' % book['author'])
+#     print('- genre: %s' % book['genre'])
 
 
 #     1. Prompt the user to enter a genre, then loop through your books list and
 #        print out the titles of all the books in that genre.
+
+company_rates = {
+    'google': 400,
+    'amazon': 380,
+    'facebook': 350
+}
+
+hours_worked = {
+    'google': 6,
+    'facebook': 10,
+    'amazon': 4,
+}
+
+# for key in company_rates.keys():
+#     value = company_rates[key]
+#     print(f'key: {key} -- value: {value}')
+
+total_pay = 0
+for company_name in company_rates.keys():
+    hourly_rate = company_rates[company_name]
+    hours = hours_worked[company_name]
+    company_total_pay = hourly_rate * hours
+    print(f'{company_name.title()} paid me ${company_total_pay:,} this week.')
+    total_pay += company_total_pay
+
+print(f'For a total of ${total_pay:,}.')
