@@ -2,45 +2,45 @@
 # 1. prompt the user for a day of the week, print out whether the day is Monday
 #    or not
 
-# weekday = input('Please enter a weekday: ')
-# print(f'weekday = {weekday}')
-# if weekday == 'Monday':
-#     print("Sounds like someone has a case of the Mondays!")
-# else:
-#     print('It is not Monday')
+weekday = input('Please enter a weekday: ')
+print(f'weekday = {weekday}')
+if weekday == 'Monday':
+    print("Sounds like someone has a case of the Mondays!")
+else:
+    print('It is not Monday')
 
 # 2. prompt the user for a day of the week, print out whether the day is a
 #    weekday or a weekend
 
-# weekday = input('Please enter a day of the week: ')
-# if weekday == 'Saturday' or weekday == 'Sunday':
-#     print('It is a weekend')
-# else:
-#     print('It is a weekday')
+weekday = input('Please enter a day of the week: ')
+if weekday == 'Saturday' or weekday == 'Sunday':
+    print('It is a weekend')
+else:
+    print('It is a weekday')
 
-# weekday = input('Please enter a day of the week: ')
-# if weekday.lower().startswith('s'):
-#     print('It is a weekend')
-# else:
-#     print('It is a weekday')
+weekday = input('Please enter a day of the week: ')
+if weekday.lower().startswith('s'):
+    print('It is a weekend')
+else:
+    print('It is a weekday')
 
-# weekend_days = ['saturday', 'sunday', 'sat', 'sun']
-# weekday = input('Enter a weekday: ')
-# if weekday.lower() in weekend_days:
-#     print('Weekend!')
-# else:
-#     print('Weekday!')
+weekend_days = ['saturday', 'sunday', 'sat', 'sun']
+weekday = input('Enter a weekday: ')
+if weekday.lower() in weekend_days:
+    print('Weekend!')
+else:
+    print('Weekday!')
 
-# hours_worked = 43
-# hourly_rate = 900
-# if hours_worked > 40:
-#     pay_at_regular_rate = 40 * hourly_rate
-#     overtime_pay = (hours_worked - 40) * hourly_rate * 1.5
-#     paycheck = pay_at_regular_rate + overtime_pay
-# else:
-#     paycheck = hourly_rate * hours_worked
+hours_worked = 43
+hourly_rate = 900
+if hours_worked > 40:
+    pay_at_regular_rate = 40 * hourly_rate
+    overtime_pay = (hours_worked - 40) * hourly_rate * 1.5
+    paycheck = pay_at_regular_rate + overtime_pay
+else:
+    paycheck = hourly_rate * hours_worked
 
-# print(paycheck)
+print(paycheck)
 
 # 1. Loop Basics
 
@@ -66,29 +66,29 @@
 #             14
 #             15
 
-# i = 5
-# while i <= 15:
-#     print(i)
-#     i += 1
+i = 5
+while i <= 15:
+    print(i)
+    i += 1
 
 #         - Create a while loop that will count by 2's starting with 0 and ending
 #           at 100. Follow each number with a new line.
 
-# i = 0
-# while i <= 100:
-#     print(i)
-#     i += 2
+i = 0
+while i <= 100:
+    print(i)
+    i += 2
 
 #         - Alter your loop to count backwards by 5's from 100 to -10.
-# i = 100
-# while i >= -10:
-#     print(i)
-#     i -= 5
+i = 100
+while i >= -10:
+    print(i)
+    i -= 5
 
-# i = 2
-# while True:
-#     print(len(str(i)))
-#     i = i ** 2
+i = 2
+while True:
+    print(len(str(i)))
+    i = i ** 2
 
 #         - Create a while loop that starts at 2, and displays the number
 #           squared on each line while the number is less than 1,000,000. Output
@@ -102,12 +102,12 @@
 #              65536
 #             ```
 
-# i = 2
-# while i < 1_000_000:
-#     print(i)
-#     i *= i
-#     # same as
-#     # i = i ** 2
+i = 2
+while i < 1_000_000:
+    print(i)
+    i *= i
+    # same as
+    # i = i ** 2
 
 #         1. Write a loop that uses `print` to create the output shown below.
 
@@ -132,13 +132,13 @@
 #                 10
 #                 5
 
-# i = 100
-# while i >= 5:
-#     print(i)
-#     i -= 5
+i = 100
+while i >= 5:
+    print(i)
+    i -= 5
 
-# for n in range(100, 0, -5):
-#     print(n)
+for n in range(100, 0, -5):
+    print(n)
 
 #     1. For Loops
 
@@ -158,11 +158,11 @@
 #                 7 x 9 = 63
 #                 7 x 10 = 70
 
-# x = int(input('Please enter a number: '))
+x = int(input('Please enter a number: '))
 
-# for n in range(1, 11):
-#     output = '{} x {} = {}'.format(x, n, x * n)
-#     print(output)
+for n in range(1, 11):
+    output = '{} x {} = {}'.format(x, n, x * n)
+    print(output)
 
 
 #         1. Create a `for` loop that uses `print` to create the output shown below.
@@ -177,8 +177,8 @@
 #                 88888888
 #                 999999999
 
-# for n in range(1, 10):
-#     print(str(n) * n)
+for n in range(1, 10):
+    print(str(n) * n)
 
 
 #     1. `break` and `continue`
@@ -264,16 +264,16 @@ for n in range(1, 51):
 #        function returns a string, so you'll need to convert this to a numeric
 #        type.)
 
-# upper_bound = int(input('Please enter a number: '))
-# for n in range(0, upper_bound + 1):
-#     print(n)
+upper_bound = int(input('Please enter a number: '))
+for n in range(0, upper_bound + 1):
+    print(n)
 
 #     1. Write a program that prompts the user for a positive integer. Next write
 #        a loop that prints out the numbers from the number the user entered down
 #        to 1.
-# starting_point = int(input('Enter the starting number'))
-# for n in range(starting_point, 0, -1):
-#     print(n)
+starting_point = int(input('Enter the starting number'))
+for n in range(starting_point, 0, -1):
+    print(n)
 
 
 # 1. Fizzbuzz
@@ -286,31 +286,33 @@ for n in range(1, 51):
 #     - For multiples of three print "Fizz" instead of the number
 #     - For the multiples of five print "Buzz".
 #     - For numbers which are multiples of both three and five print "FizzBuzz".
-# for n in range(1, 16):
-#     if n % 15 == 0:
-#         print('FizzBuzz')
-#     elif n % 3 == 0:
-#         print('Fizz')
-#     elif n % 5 == 0:
-#         print('Buzz')
-#     else:
-#         print(n)
+for n in range(1, 16):
+    if n % 15 == 0:
+        print('FizzBuzz')
+    elif n % 3 == 0:
+        print('Fizz')
+    elif n % 5 == 0:
+        print('Buzz')
+    else:
+        print(n)
 
-# for n in range(1, 111):
-#     output = ''
-#     if n % 3 == 0:
-#         output += 'Fizz'
-#     if n % 5 == 0:
-#         output = f'{output}Buzz'
-#     if n % 7 == 0:
-#         output = '%sBang' % output
 
-#     # if output == '':
-#     #     print(n)
-#     # else:
-#     #     print(output)
-#     # we could rewrite the above if-else like so:
-#     print(n if output == '' else output)
+# Alternate Solution
+for n in range(1, 111):
+    output = ''
+    if n % 3 == 0:
+        output += 'Fizz'
+    if n % 5 == 0:
+        output = f'{output}Buzz'
+    if n % 7 == 0:
+        output = '%sBang' % output
+
+    # if output == '':
+    #     print(n)
+    # else:
+    #     print(output)
+    # we could rewrite the above if-else like so:
+    print(n if output == '' else output)
 
 # 1. Display a table of powers.
 
@@ -338,18 +340,18 @@ for n in range(1, 51):
 
 #     **Bonus**: Research python's format string specifiers to align the table
 
-# upper_bound = int(input('Enter a number: '))
-# n = 1
+upper_bound = int(input('Enter a number: '))
+n = 1
 
-# print('number | squared | cubed')
-# print('------ | ------- | -----')
-# for n in range(1, upper_bound + 1):
-#     # right-aligned (default)
-#     print('{:6} | {:7} | {:5}'.format(n, n ** 2, n ** 3))
-#     # left-aligned
-#     # print('{:<6} | {:<7} | {:<5}'.format(n, n ** 2, n ** 3))
-#     # center-aligned
-#     # print('{:^6} | {:^7} | {:^5}'.format(n, n ** 2, n ** 3))
+print('number | squared | cubed')
+print('------ | ------- | -----')
+for n in range(1, upper_bound + 1):
+    # right-aligned (default)
+    print('{:6} | {:7} | {:5}'.format(n, n ** 2, n ** 3))
+    # left-aligned
+    # print('{:<6} | {:<7} | {:<5}'.format(n, n ** 2, n ** 3))
+    # center-aligned
+    # print('{:^6} | {:^7} | {:^5}'.format(n, n ** 2, n ** 3))
 
 
 # 1. Convert given number grades into letter grades.
@@ -371,55 +373,55 @@ for n in range(1, 51):
 
 #     - Edit your grade ranges to include pluses and minuses (ex: 99-100 = A+).
 
-# user_wants_to_continue = 'yes'
+user_wants_to_continue = 'yes'
 
-# while user_wants_to_continue == 'yes':
-#     grade = int(input('Enter a number grade: '))
+while user_wants_to_continue == 'yes':
+    grade = int(input('Enter a number grade: '))
 
-#     if grade >= 88:
-#         print('A')
-#     elif grade >= 80:
-#         print('B')
-#     elif grade >= 67:
-#         print('C')
-#     elif grade >= 60:
-#         print('D')
-#     elif grade >= 0:
-#         print('F')
+    if grade >= 88:
+        print('A')
+    elif grade >= 80:
+        print('B')
+    elif grade >= 67:
+        print('C')
+    elif grade >= 60:
+        print('D')
+    elif grade >= 0:
+        print('F')
 
-#     user_wants_to_continue = input('Do you want to continue? ')
+    user_wants_to_continue = input('Do you want to continue? ')
 
 # 1. Create a list of dictionaries where each dictionary represents a book that
 #    you have read. Each dictionary in the list should have the keys `title`,
 #    `author`, and `genre`. Loop through the list and print out information about
 #    each book.
-# books = [
-#     {
-#         'title': 'Data Science From Scratch',
-#         'author': 'Joel Grus',
-#         'genre': ['Data Science', 'Python', 'Programming']
-#     },
-#     {
-#         'title': 'Beautiful Evidence',
-#         'author': 'Edward Tufte',
-#         'genre': ['Visualizations', 'Data Science']
-#     },
-#     {
-#         'title': 'Oh the places you\'ll go',
-#         'author': 'Dr. Seuss',
-#         'genre': ['Whimsy', 'Childrens']
-#     }
-# ]
+books = [
+    {
+        'title': 'Data Science From Scratch',
+        'author': 'Joel Grus',
+        'genre': ['Data Science', 'Python', 'Programming']
+    },
+    {
+        'title': 'Beautiful Evidence',
+        'author': 'Edward Tufte',
+        'genre': ['Visualizations', 'Data Science']
+    },
+    {
+        'title': 'Oh the places you\'ll go',
+        'author': 'Dr. Seuss',
+        'genre': ['Whimsy', 'Childrens']
+    }
+]
 
-# genre_to_show = input('Enter a genre: ')
+genre_to_show = input('Enter a genre: ')
 
-# for book in books:
-#     if genre_to_show not in book['genre']:
-#         continue
-#     print('-------------')
-#     print('- title: %s' % book['title'])
-#     print('- author: %s' % book['author'])
-#     print('- genre: %s' % book['genre'])
+for book in books:
+    if genre_to_show not in book['genre']:
+        continue
+    print('-------------')
+    print('- title: %s' % book['title'])
+    print('- author: %s' % book['author'])
+    print('- genre: %s' % book['genre'])
 
 
 #     1. Prompt the user to enter a genre, then loop through your books list and
