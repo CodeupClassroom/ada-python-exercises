@@ -375,18 +375,18 @@ for n in range(1, upper_bound + 1):
 
 # Alternate solution using dictionary keys and dictionary iteration:
 grade_ranges = {
-    'A': [100, 88]
-    'B': [87, 80]
-    'C': [79, 67]
-    'D': [66, 60]
-    'F': [59, 0]
+    'A': [100, 88],
+    'B': [87, 80],
+    'C': [79, 67],
+    'D': [66, 60],
+    'F': [59, 0],
 }
 
 grade = int(input('Enter a number grade: '))
 for letter_grade in grade_ranges.keys():
     upper_bound, lower_bound = grade_ranges[letter_grade]
     if lower_bound <= grade <= upper_bound:
-        print(grade)
+        print(letter_grade)
 
 
 # solution from the in-class walkthrough
