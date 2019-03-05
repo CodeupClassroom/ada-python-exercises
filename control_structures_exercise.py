@@ -219,6 +219,40 @@
 #                 Here is an odd number: 47
 #                 Here is an odd number: 49
 
+# step 1: get a *valid* number from the user
+# while we have something that is not valid
+#   keep prompting the user for input
+
+# number_to_skip = input('Please enter an odd number (1-50): ')
+# while not number_to_skip.isdigit() or int(number_to_skip) < 1 or int(number_to_skip) > 50 or int(number_to_skip) % 2 == 0:
+#     number_to_skip = input('Please enter an odd number (1-50): ')
+
+# # keep prompting for input
+# # if we have valid input, stop the loop
+# while True:
+#     number_to_skip = input('Enter an odd number (1-50): ')
+#     # if number_to_skip.isdigit() and 1 <= int(number_to_skip) <= 50 and int(number_to_skip) % 2 == 1:
+#     #     break
+#     if number_to_skip.isdigit() and int(number_to_skip) in range(1, 51) and int(number_to_skip) % 2 == 1:
+#         break
+
+# number_to_skip = int(number_to_skip)
+# step 2: do logic with the number we acquired
+# for every number between 1 and 50
+#   if the number is even
+# skip it
+#   if the number is the one that was entered
+#       print the special message
+#   else
+#       print the number
+# for n in range(1, 51):
+#     if n % 2 == 0:
+#         continue
+#     if n == number_to_skip:
+#         print(f'Yikes! Skipping number {n}')
+#     else:
+#         print(f'Here is an odd number: {n}')
+
 #     1. The `input` function can be used to prompt for input and use that input
 #        in your python code. Prompt the user to enter a positive number and write
 #        a loop that counts from 0 to that number. (Hints: first make sure that
@@ -226,9 +260,17 @@
 #        function returns a string, so you'll need to convert this to a numeric
 #        type.)
 
+# upper_bound = int(input('Please enter a number: '))
+# for n in range(0, upper_bound + 1):
+#     print(n)
+
 #     1. Write a program that prompts the user for a positive integer. Next write
 #        a loop that prints out the numbers from the number the user entered down
 #        to 1.
+# starting_point = int(input('Enter the starting number'))
+# for n in range(starting_point, 0, -1):
+#     print(n)
+
 
 # 1. Fizzbuzz
 
@@ -240,6 +282,31 @@
 #     - For multiples of three print "Fizz" instead of the number
 #     - For the multiples of five print "Buzz".
 #     - For numbers which are multiples of both three and five print "FizzBuzz".
+# for n in range(1, 16):
+#     if n % 15 == 0:
+#         print('FizzBuzz')
+#     elif n % 3 == 0:
+#         print('Fizz')
+#     elif n % 5 == 0:
+#         print('Buzz')
+#     else:
+#         print(n)
+
+# for n in range(1, 111):
+#     output = ''
+#     if n % 3 == 0:
+#         output += 'Fizz'
+#     if n % 5 == 0:
+#         output = f'{output}Buzz'
+#     if n % 7 == 0:
+#         output = '%sBang' % output
+
+#     # if output == '':
+#     #     print(n)
+#     # else:
+#     #     print(output)
+#     # we could rewrite the above if-else like so:
+#     print(n if output == '' else output)
 
 # 1. Display a table of powers.
 
@@ -267,6 +334,20 @@
 
 #     **Bonus**: Research python's format string specifiers to align the table
 
+# upper_bound = int(input('Enter a number: '))
+# n = 1
+
+# print('number | squared | cubed')
+# print('------ | ------- | -----')
+# for n in range(1, upper_bound + 1):
+#     # right-aligned (default)
+#     print('{:6} | {:7} | {:5}'.format(n, n ** 2, n ** 3))
+#     # left-aligned
+#     # print('{:<6} | {:<7} | {:<5}'.format(n, n ** 2, n ** 3))
+#     # center-aligned
+#     # print('{:^6} | {:^7} | {:^5}'.format(n, n ** 2, n ** 3))
+
+
 # 1. Convert given number grades into letter grades.
 
 #     - Prompt the user for a numerical grade from 0 to 100.
@@ -286,10 +367,56 @@
 
 #     - Edit your grade ranges to include pluses and minuses (ex: 99-100 = A+).
 
+# user_wants_to_continue = 'yes'
+
+# while user_wants_to_continue == 'yes':
+#     grade = int(input('Enter a number grade: '))
+
+#     if grade >= 88:
+#         print('A')
+#     elif grade >= 80:
+#         print('B')
+#     elif grade >= 67:
+#         print('C')
+#     elif grade >= 60:
+#         print('D')
+#     elif grade >= 0:
+#         print('F')
+
+#     user_wants_to_continue = input('Do you want to continue? ')
+
 # 1. Create a list of dictionaries where each dictionary represents a book that
 #    you have read. Each dictionary in the list should have the keys `title`,
 #    `author`, and `genre`. Loop through the list and print out information about
 #    each book.
+books = [
+    {
+        'title': 'Data Science From Scratch',
+        'author': 'Joel Grus',
+        'genre': ['Data Science', 'Python', 'Programming']
+    },
+    {
+        'title': 'Beautiful Evidence',
+        'author': 'Edward Tufte',
+        'genre': ['Visualizations', 'Data Science']
+    },
+    {
+        'title': 'Oh the places you\'ll go',
+        'author': 'Dr. Seuss',
+        'genre': ['Whimsy', 'Childrens']
+    }
+]
+
+genre_to_show = input('Enter a genre: ')
+
+for book in books:
+    if genre_to_show not in book['genre']:
+        continue
+    print('-------------')
+    print('- title: %s' % book['title'])
+    print('- author: %s' % book['author'])
+    print('- genre: %s' % book['genre'])
+
 
 #     1. Prompt the user to enter a genre, then loop through your books list and
 #        print out the titles of all the books in that genre.
