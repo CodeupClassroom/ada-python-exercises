@@ -15,8 +15,10 @@ print('is_two(3) = %s' % is_two(3))
 print('is_two([]) = %s' % is_two([]))
 print('is_two(None) = %s' % is_two(None))
 
+VOWELS = 'aeiou'
+
 def is_vowel(a_string):
-    return a_string in 'aeiou'
+    return a_string in VOWELS
 
 print("is_vowel('a') == %s" % is_vowel('a'))
 print("is_vowel('e') == %s" % is_vowel('e'))
@@ -131,6 +133,37 @@ def remove_vowels(a_string):
     return a_string
 
 remove_vowels('abcdef')
+
+LETTERS = ' _abcdefghijklmnopqrstuvwxyz0123456789'
+
+def normalize_name(a_string):
+    a_string = a_string.lower()
+    valid_characters = []
+    for character in a_string:
+        if character in LETTERS:
+            valid_characters.append(character)
+    return ''.join(valid_characters).strip().replace(' ', '_')
+
+print("normalize_name('Name') == {}".format(normalize_name('Name')))
+print("normalize_name('First Name') == {}".format(normalize_name('First Name')))
+print("normalize_name('% Completed') == {}".format(normalize_name('% Completed')))
+
+
+def cumsum(numbers):
+    sums = [numbers[0]]
+    for current_number in numbers[1:]:
+        last_number = sums[-1]
+        next_number = last_number + current_number
+        sums.append(next_number)
+    return sums
+
+def cumsum(num_list):
+    return [sum(num_list[: i + 1]) for i in range(len(num_list))]
+
+print("cumsum([1, 1, 1]) == %s" % cumsum([1, 1, 1]))
+print("cumsum([1, 2, 3]) == %s" % cumsum([1, 2, 3]))
+print("cumsum([1, 2, 3, 4]) == %s" % cumsum([1, 2, 3, 4]))
+print("cumsum([1, -2, 1]) == %s" % cumsum([1, -2, 1]))
 
 print('\n' * 10)
 
