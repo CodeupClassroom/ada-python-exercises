@@ -61,3 +61,24 @@ three
 with open('myfile.txt', 'w') as f:
     f.write(file_contents)
 ```
+
+## Exercises
+
+1. Read the contents of your last exercise file into a variable.
+
+    1. Print out every line in the file
+    1. Print out every line in the file, but add a line numbers
+
+1. Write some python code to create a grocery list.
+
+    1. Create a variable named `grocery_list`. It should be a list, and the
+       elements in the list should be a least 3 things that you need to buy from
+       the grocery store.
+    1. Create a function named `make_grocery_list`. When run, this function
+       should write the contents of the `grocery_list` variable to a file named
+       `my_grocery_list.txt`.
+    1. Create a function named `show_grocery_list`. When run, it should show
+       each item on the grocery list.
+    1. Create a function named `buy_item`. It should accept the name of an item
+       on the grocery list, and remove that item from the list.
+
