@@ -179,8 +179,8 @@ c.prod()
 c.std()
 
 # Exercise 3 - Determine the variance of c.
-from math import sqrt
-sqrt(c.std())
+c.var()
+c.std() ** 2
 
 # Exercise 4 - Print out the shape of the array c
 c.shape
